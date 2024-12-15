@@ -11,6 +11,7 @@
     @apply h-full;
     @apply select-none;
     @apply bg-transparent;
+    @apply bg-black;
     @apply font-mono antialiased text-white;
     @apply overflow-hidden;
   }
