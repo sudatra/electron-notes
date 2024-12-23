@@ -6,7 +6,8 @@ declare global {
     // electron: ElectronAPI
     context: {
       locale: string,
-      getNotes: GetNotes
+      getNotes: GetNotes,
+      readNote: ReadNote
     }
   }
 }
