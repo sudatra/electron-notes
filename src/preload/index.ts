@@ -1,4 +1,4 @@
-import { GetNotes, ReadNote, WriteNote } from '@shared/types';
+import { CreateNote, GetNotes, ReadNote, WriteNote } from '@shared/types';
 import { contextBridge, ipcRenderer } from 'electron'
 // import { electronAPI } from '@electron-toolkit/preload'
 
@@ -12,6 +12,7 @@ try {
     getNotes: (...args: Parameters<GetNotes>) => ipcRenderer.invoke('getNotes', ...args),
     readNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('readNote', ...args),
     writeNote: (...args: Parameters<WriteNote>) => ipcRenderer.invoke('writeNote', ...args),
+    createNote: (...args: Parameters<CreateNote>) => ipcRenderer.invoke('createNote', ...args)
   })
 }
 catch(error) {
