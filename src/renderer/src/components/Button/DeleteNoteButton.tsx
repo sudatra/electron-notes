@@ -7,8 +7,8 @@ import { deleteNoteAtom } from '@/store';
 export const DeleteNoteButton = ({ ...props }: ActionButtonProps) => {
   const deleteEmptyNote = useSetAtom(deleteNoteAtom);
   
-  const handleNoteDeletion = () => {
-    deleteEmptyNote();
+  const handleNoteDeletion = async () => {
+    await deleteEmptyNote();
   }
 
   return (
